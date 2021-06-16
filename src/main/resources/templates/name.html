@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Name</title>
+</head>
+<body>
+<form th:action="@{/result}" method="post" th:object = "${myNameForm}">
+       名前：<input type="text" th:field="*{myName}">
+    <p>
+        <input type="submit" value="次へ">
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Result</title>
+</head>
+<body>
+    <p><span th:text="${myName}">あなた</span>さん</p>
+    <p>現在時刻：<span th:text="${date}">あなた</span></p>
+    
+    <table border="1">
+		<tr>
+			<th>ID</th>
+			<th>名前</th>
+		</tr>
+    
+    	<tr th:each="user:${userList}">
+    		<td class="center" th:text="${user.id}"></td>
+    		<td th:text="${user.name}"></td>
+    	</tr>
+    </table>
+</body>
+</html>
