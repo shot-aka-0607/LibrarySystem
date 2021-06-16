@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Regist</title>
+</head>
+<body>
+<form th:action="@{/result}" method="post" th:object = "${bookInfoForm}">
+       名前：<input type="text" th:field="*{name}"> <br>
+       値段：<input type="number" th:field="*{price}">
+    <p>
+        <input type="submit" value="上記で登録">
+    </p>
+</form>
+</body>
+</html>
